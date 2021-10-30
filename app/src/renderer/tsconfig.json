@@ -1,0 +1,23 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "types": ["vite/client", "@twstyled/core"],
+    "target": "esnext",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "importHelpers": true,
+    "jsx": "preserve",
+    "esModuleInterop": true,
+    "sourceMap": true,
+    "baseUrl": "../..",
+    "paths": {
+      "@/renderer/*": ["src/renderer/*"],
+      "@/common/*": ["src/common/*"],
+      "editor/*": ["../src/*"]
+    },
+    "allowSyntheticDefaultImports": true
+  },
+  "include": ["../renderer/**/*", "../common/**/*"],
+  "exclude": ["../main/**/*"]
+}
