@@ -26,6 +26,8 @@ function buildStart() {
   console.log(startMessage)
 }
 
+let viteClose: () => Promise<void>
+
 async function electronClosed() {
   if (viteClose) {
     await viteClose()
@@ -41,8 +43,6 @@ function notFoundTSConfig() {
   console.error(chalk.red(cannotFoundTSConfigMessage))
   process.exit()
 }
-
-let viteClose: () => Promise<void>
 
 async function main() {
   // Start vite server

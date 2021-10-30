@@ -33,7 +33,7 @@ function createWindow() {
   contextMenu({
     showSearchWithGoogle: false,
     showCopyImage: false,
-    prepend: (defaultActions, params, browserWindow) => [
+    prepend: (_defaultActions, _params, _browserWindow) => [
       {
         label: 'its like magic 💥',
       },
@@ -65,13 +65,13 @@ function createWindow() {
   const port = process.env.PORT || 3000
 
   if (isDevelopment) {
-    void browserWindow.loadURL(`http://localhost:${port}`)
+    browserWindow.loadURL(`http://localhost:${port}`)
   } else {
-    void browserWindow.loadFile('./index.html')
+    browserWindow.loadFile('./index.html')
   }
 }
 
-void app.whenReady().then(createWindow)
+app.whenReady().then(createWindow)
 
 app.on('window-all-closed', () => {
   app.quit()
