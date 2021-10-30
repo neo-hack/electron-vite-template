@@ -5,7 +5,7 @@ type State = {
   visible: boolean
 }
 
-export const search = createModel<RootModel>()({
+export const basic = createModel<RootModel>()({
   state: {
     visible: false,
   } as State,

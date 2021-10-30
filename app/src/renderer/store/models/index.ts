@@ -1,11 +1,7 @@
-import { Models } from '@rematch/core'
-import { view } from './view'
-import { search } from './search'
-import { todo } from './todo'
+import type { Models } from '@rematch/core'
+import { basic } from './basic'
 export interface RootModel extends Models<RootModel> {
-  view: typeof view
-  search: typeof search
-  todo: typeof todo
+  basic: typeof basic
 }
 
-export const models: RootModel = { view, search, todo }
+export const models: RootModel = { basic }
