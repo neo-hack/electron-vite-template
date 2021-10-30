@@ -3,6 +3,7 @@
  */
 import * as path from 'path'
 import * as fs from 'fs'
+import chalk from 'chalk'
 import * as esbuild from 'esbuild'
 import {
   cannotFoundTSConfigMessage,
@@ -25,7 +26,7 @@ function buildStart() {
 }
 
 function buildComplete(dir: string) {
-  console.log(finishMessageProd)
+  console.log(finishMessageProd, dir)
   process.exit()
 }
 
@@ -40,8 +41,6 @@ async function main() {
 }
 
 main()
-
-const chalk = require('chalk')
 
 function transformErrors(error: esbuild.BuildFailure): CompileError[] {
   const errors = error.errors.map((e): CompileError => {

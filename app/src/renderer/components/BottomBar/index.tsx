@@ -23,7 +23,7 @@ export const BottomBar = (props: BottomBarProps) => {
     <Bar>
       <Item onClick={props.onClick}>
         <MathPlus />
-        Create New Page
+        Try aiou
       </Item>
     </Bar>
   )

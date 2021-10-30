@@ -1,6 +1,5 @@
 import styled from 'styled-components'
 
-// TODO: to granen
 type TopBarProps = {
   mode?: 'light'
 }

@@ -1,1 +1,1 @@
-export type View = 'day' | 'week'
+export type Type = 'stats' | 'editor'

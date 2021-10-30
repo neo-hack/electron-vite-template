@@ -1,7 +1,3 @@
-/**
- * @todo: in granen
- */
-
 import React, { useEffect } from 'react'
 import styled from 'styled-components'
 import { RadioChecked, Signal } from 'css.gg/icons/all'

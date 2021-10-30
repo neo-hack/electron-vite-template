@@ -3,8 +3,8 @@ import { GranenThemeProvider, Layout } from 'granen'
 import styled from 'styled-components'
 import { HashRouter, Switch, Route } from 'react-router-dom'
 
-import { EditorPage } from '@/renderer/pages/editor'
-import { StatsPage } from '@/renderer/pages/stats'
+import EditorPage from '@/renderer/pages/editor'
+import StatsPage from '@/renderer/pages/stats'
 import { NavigatePanel } from '@/renderer/components/NavigatePanel'
 import { GlobalStyle } from '@/renderer/GlobalStyle'
 
