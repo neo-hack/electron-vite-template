@@ -10,7 +10,7 @@ function LoggerPlugin(): Plugin {
       for (const file of ctx.modules) {
         const path = file.file.replace(srcPath, '')
         console.log(
-          chalk.bgYellow.black(consoleViteMessagePrefix),
+          chalk.bgBlue.black(consoleViteMessagePrefix),
           chalk.yellow('hmr update'),
           chalk.cyan(path),
         )
@@ -33,7 +33,7 @@ export default async function startViteServer(): Promise<() => Promise<void>> {
   if (typeof address === 'object') {
     const port = address.port
     console.log(
-      chalk.bgGreen.black(consoleViteMessagePrefix),
+      chalk.bgBlue.black(consoleViteMessagePrefix),
       chalk.cyan(`Dev server running at: localhost:${port}`),
     )
   }

@@ -24,14 +24,16 @@ function App() {
           <GlobalStyle />
           <Layout>
             <NavigatePanel />
-            <Switch>
-              <Route exact={true} path="/">
-                <EditorPage />
-              </Route>
-              <Route exact={true} path="/stats">
-                <StatsPage />
-              </Route>
-            </Switch>
+            <Layout.Main>
+              <Switch>
+                <Route exact={true} path="/">
+                  <EditorPage />
+                </Route>
+                <Route exact={true} path="/stats">
+                  <StatsPage />
+                </Route>
+              </Switch>
+            </Layout.Main>
           </Layout>
         </Container>
       </HashRouter>

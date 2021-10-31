@@ -20,6 +20,7 @@
     "publish:win": "env-cmd -r ./.config/.env-secrets.json -e production electron-builder --win"
   },
   "dependencies": {
+    "@react-spring/web": "^9.3.0",
     "@rematch/core": "^2.0.1",
     "css.gg": "^2.0.0",
     "debug": "^4.3.2",
@@ -35,6 +36,7 @@
     "react-router": "^5.2.1",
     "react-router-dom": "^5.3.0",
     "redux": "^4.1.0",
+    "rich-markdown-editor": "^11.18.14",
     "styled-components": "^5.3.3",
     "tailwindcss": "^2.0.3",
     "uuid": "^8.3.2",
