@@ -4,7 +4,7 @@ importers:
 
   .:
     specifiers:
-      '@aiou/eslint-config': ^0.3.1
+      '@aiou/eslint-config': ^0.3.2
       '@changesets/cli': ^2.16.0
       cz-emoji: ^1.3.1
       eslint: ^7.32.0
@@ -12,7 +12,7 @@ importers:
       lint-staged: ^11.1.1
       prettier: ^2.3.2
     devDependencies:
-      '@aiou/eslint-config': 0.3.1_eslint@7.32.0+prettier@2.4.1
+      '@aiou/eslint-config': 0.3.2_eslint@7.32.0+prettier@2.4.1
       '@changesets/cli': 2.17.0
       cz-emoji: 1.3.1
       eslint: 7.32.0
@@ -119,8 +119,8 @@ packages:
     resolution: {integrity: sha512-sAP4LldeWNz0lNzmTird3uWfFDWWTeg6V/MsmyyLR9X1idwKBWIgt/ZvinqQldJm3LecKEs1emkbquO6PCiLVQ==}
     dev: true
 
-  /@aiou/eslint-config-basic/0.2.1_eslint@7.32.0:
-    resolution: {integrity: sha512-SIk76gvbH09CNGBuaEpsQBPgOFFx0D12ZASV4VAi+zgA5F+ZiCupKjX+37Hhm0658r6IbiWFVwDu//5HtAMWbQ==}
+  /@aiou/eslint-config-basic/0.2.2_eslint@7.32.0:
+    resolution: {integrity: sha512-y2vc/+NY0MtCYfQ+B7qCbfcPxNhGE4lq09DHIG1WND67lMNKD4GdudGJbH5uLs7raVnq4T4A1PotnjZo7k1JsA==}
     peerDependencies:
       eslint: '>=7.4.0'
     dependencies:
@@ -140,12 +140,12 @@ packages:
       - supports-color
     dev: true
 
-  /@aiou/eslint-config-react/0.2.1_eslint@7.32.0:
-    resolution: {integrity: sha512-A4ABpZaKNdUt2rc73lXEgO6yKoDu3E67f5d9c472PqXEme+W9wZf1yjyFBwsicn5FzPl6AGbKXu4ESvZH/gsYQ==}
+  /@aiou/eslint-config-react/0.2.2_eslint@7.32.0:
+    resolution: {integrity: sha512-TCPkX+u2oxg/qZnmvNiUvE6HEG//j1QLa9UqUax2jqLS8bPszm2WbzVjUCPMzoN/ruCadTYXexO0wHC8+4Za1A==}
     peerDependencies:
       eslint: '>=7.4.0'
     dependencies:
-      '@aiou/eslint-config-ts': 0.2.1_eslint@7.32.0
+      '@aiou/eslint-config-ts': 0.2.2_eslint@7.32.0
       eslint: 7.32.0
       eslint-plugin-react: 7.26.1_eslint@7.32.0
       eslint-plugin-react-hooks: 4.2.0_eslint@7.32.0
@@ -154,13 +154,13 @@ packages:
       - typescript
     dev: true
 
-  /@aiou/eslint-config-ts/0.2.1_eslint@7.32.0:
-    resolution: {integrity: sha512-+JeITzjmYeb1ckVry4EnGFyZHaVsmWwfqMJPxcAzMNxb/9OcI/byDJYBgq0S0fDvMAwxfzMRJLEnYWOKzvxZ+g==}
+  /@aiou/eslint-config-ts/0.2.2_eslint@7.32.0:
+    resolution: {integrity: sha512-udDs/srrJNTpAoHzb7B6Pdw6bKNHoOwedf4BOz19+KnSyzEAGc6XdhO159O/j12fGXAh0pEWCMmsgkTZWOZxlQ==}
     peerDependencies:
       eslint: '>=7.4.0'
       typescript: '>=3.9'
     dependencies:
-      '@aiou/eslint-config-basic': 0.2.1_eslint@7.32.0
+      '@aiou/eslint-config-basic': 0.2.2_eslint@7.32.0
       '@typescript-eslint/eslint-plugin': 4.33.0_2951ba233cd46bb4e0f2f0a3f7fe108e
       '@typescript-eslint/parser': 4.33.0_eslint@7.32.0
       eslint: 7.32.0
@@ -168,14 +168,14 @@ packages:
       - supports-color
     dev: true
 
-  /@aiou/eslint-config/0.3.1_eslint@7.32.0+prettier@2.4.1:
-    resolution: {integrity: sha512-ORPfwzoVM8ISHcb9Fi7gT8P2LKfJAwSdM87VeGaupdyrGl9K2cvawq6zGQI/Z3RiyT4Y74h6yMoubaoSZZYbzA==}
+  /@aiou/eslint-config/0.3.2_eslint@7.32.0+prettier@2.4.1:
+    resolution: {integrity: sha512-ZnEWsinz4X0I5YVh6f4fjxADv0AxfrHJN7E29J+BJ8eO7qFk8aKDYlY8kFO405aurpYlw6lIHoU3cgRMXkmB5Q==}
     peerDependencies:
       eslint: '>=7.4.0'
       prettier: '>=2.2.1'
       pretty-quick: '>=3.1.0'
     dependencies:
-      '@aiou/eslint-config-react': 0.2.1_eslint@7.32.0
+      '@aiou/eslint-config-react': 0.2.2_eslint@7.32.0
       '@aiou/eslint-ignore': 0.1.2
       '@aiou/eslint-plugin-progress': 0.1.7_eslint@7.32.0
       eslint: 7.32.0
