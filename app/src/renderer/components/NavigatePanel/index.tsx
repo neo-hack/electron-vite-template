@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { RadioChecked, Signal } from 'css.gg/icons/all'
 import { Menu } from 'granen'
 import { useHistory } from 'react-router'
+import { logger } from '@/common/logger'
 
 const Panel = styled.div`
   background-color: #151419;
@@ -37,7 +38,7 @@ export const NavigatePanel = () => {
   }
   useEffect(() => {
     window.Main.on('render:read-file', (data: string) => {
-      console.log('render:read-file', data)
+      logger.bridge.renderer('read-file', data)
     })
   }, [])
   return (

@@ -9,7 +9,6 @@
   },
   "scripts": {
     "clean": "rimraf yarn.lock && rimraf ./**/.next && rimraf dist && rimraf ./**/out && rimraf {**/,}node_modules",
-    "dev": "cross-env NODE_ENV=development node -r esbuild-register ./scripts/dev.ts",
     "preview": "cross-env NODE_ENV=production electron ./dist/main",
     "dev:renderer": "vite",
     "dev:main": "cross-env NODE_ENV=development node -r esbuild-register ./scripts/dev.ts",
@@ -23,12 +22,13 @@
   "dependencies": {
     "@rematch/core": "^2.0.1",
     "css.gg": "^2.0.0",
+    "debug": "^4.3.2",
     "electron": "13.1.2",
     "electron-context-menu": "^2.5.0",
     "electron-window-state": "^5.0.3",
     "framer-motion": "3.7.0",
     "fs-extra": "^10.0.0",
-    "granen": "^0.2.1",
+    "granen": "^0.3.2",
     "react": "^17.0.0",
     "react-dom": "^17.0.0",
     "react-redux": "^7.2.4",

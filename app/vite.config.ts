@@ -32,10 +32,6 @@ export default defineConfig({
         find: '@/common',
         replacement: resolve(__dirname, 'src/common'),
       },
-      {
-        find: 'editor',
-        replacement: resolve(__dirname, '../src'),
-      },
     ],
     dedupe: ['react', 'react-dom'],
   },

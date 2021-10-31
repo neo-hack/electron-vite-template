@@ -1,22 +1,22 @@
 import fs from 'fs-extra'
 import os from 'os'
 import path from 'path'
+import pkg from '../../package.json'
 
-let appDir = path.resolve(os.homedir(), 'planit')
+let appDir = path.resolve(os.homedir(), pkg.name)
 if (process.env.NODE_ENV === 'development') {
-  appDir = path.resolve(process.cwd(), 'assets')
+  appDir = path.resolve(process.cwd(), '..')
 }
-console.log(appDir)
 
 export const getFiles = () => {
   const files = fs.readdirSync(appDir)
-  console.log(files)
+  return files
 }
 
-export const readFile = (filename = 'demo.md') => {
-  /**
-   * @todo: replace appDir with real pages dir
-   */
+export const readFile = (filename?: string) => {
+  if (!filename) {
+    return ''
+  }
   const filepath = path.resolve(appDir, filename)
   return fs.readFileSync(filepath).toString()
 }

@@ -81,7 +81,11 @@ async function esDev(
   try {
     await esbuild.build({
       outdir: outDir,
-      entryPoints: [path.join(mainPath, 'index.ts'), path.join(mainPath, 'io.ts')],
+      entryPoints: [
+        path.join(mainPath, 'index.ts'),
+        path.join(mainPath, 'io.ts'),
+        path.join(mainPath, 'utils.ts'),
+      ],
       tsconfig: tsconfigPath,
       format: 'cjs',
       logLevel: 'silent',

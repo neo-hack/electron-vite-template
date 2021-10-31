@@ -1,6 +1,6 @@
 import * as os from 'os'
 import * as path from 'path'
-import * as chalk from 'chalk'
+import chalk from 'chalk'
 
 export type WatchMain = (
   reportError: (errs: CompileError[]) => void,
@@ -16,15 +16,19 @@ export const outDir = path.join(process.cwd(), './dist')
 export const outDirMain = path.join(process.cwd(), './dist/main')
 export const entryPath = path.join(mainPath, 'index.ts')
 
-export const consoleMessagePrefix = '[script]'
-export const consoleViteMessagePrefix = '[vite]'
+export const consoleMessagePrefix = ' SCRIPT '
+export const consoleViteMessagePrefix = ' VITE '
 
 export const cannotFoundTSConfigMessage = "Could not find a valid 'tsconfig.json'."
-export const startMessage = chalk.cyan(`${consoleMessagePrefix} Start compile main process...`)
-export const finishMessageDev = chalk.green(
-  `${consoleMessagePrefix} Finished compiling. Rerun electron main process...`,
-)
-export const finishMessageProd = chalk.green(`${consoleMessagePrefix} Finished production build.`)
+export const startMessage = `${chalk.bgBlue.black(consoleMessagePrefix)} ${chalk.cyan(
+  'Start compile main process...',
+)}`
+export const finishMessageDev = `${chalk.bgGreen.black(consoleMessagePrefix)} ${chalk.cyan(
+  `Finished compiling. Rerun electron main process...`,
+)}`
+export const finishMessageProd = `${chalk.bgGreen.black(consoleMessagePrefix)} ${chalk.cyan(
+  `Finished production build.`,
+)}`
 
 export interface CompileError {
   location: {

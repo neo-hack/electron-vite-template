@@ -26,7 +26,8 @@ function buildStart() {
 }
 
 function buildComplete(dir: string) {
-  console.log(finishMessageProd, dir)
+  console.log(finishMessageProd)
+  console.log(`${chalk.bgGreen('OUT')}, ${chalk.cyan(dir)}`)
   process.exit()
 }
 

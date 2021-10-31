@@ -47,7 +47,7 @@ export default async function startElectron(path: string, onClose: () => Promise
   electronProcess = childProcess.spawn(electron, [path])
   electronProcess.on('exit', async (code) => {
     if (!exitByScripts) {
-      console.log(chalk.gray(`Electron exited with code ${code}`))
+      console.log(chalk.cyan(`Electron exited with code ${code}`))
       await onClose()
       process.exit()
     }

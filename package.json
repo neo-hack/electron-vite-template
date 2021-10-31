@@ -28,7 +28,7 @@
   "scripts": {
     "test": "echo test",
     "lint:fix": "eslint . --fix",
-    "start:app": "pnpm run dev --filter=./app",
+    "start:app": "pnpm run dev:main --filter=./app",
     "ci:publish": "pnpm run build && pnpx changeset publish",
     "ci:version": "pnpx changeset version",
     "ci:snapshot": "pnpx changeset version --snapshot beta",

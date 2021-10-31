@@ -3,6 +3,7 @@ import type { BrowserWindowConstructorOptions } from 'electron'
 import contextMenu from 'electron-context-menu'
 import windowStateKeeper from 'electron-window-state'
 import path from 'path'
+import { logger } from './utils'
 
 import { getFiles, readFile } from './io'
 
@@ -86,12 +87,12 @@ app.on('activate', () => {
 // io
 // TODO: constants app action
 ipcMain.on('app:get-files', () => {
-  console.log('app:get-files')
+  logger.bridge.main('get-files')
   getFiles()
 })
 
 ipcMain.on('app:read-file', () => {
-  console.log('app:read-file')
+  logger.bridge.main('read-file')
   const content = readFile()
   win.webContents.send('render:read-file', content)
 })
